@@ -1,0 +1,52 @@
+{{ include layoutTop }}
+<div class="row">
+  <div class="twelve columns">
+    <img src="images/webCover.png" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="ten columns">
+    <h1>Display your badges</h1>
+
+    <p>See what Companies are looking for your badges</p>    
+    
+	
+    <form>
+    <p>What is your email for your Open Badge Backpack"</p>
+    <input placeholder="email">
+    <br>
+    <br>
+    <p>What area of expertise would you like to be recruited in</p>
+    <select>
+	  <option value="linkedin">Software</option>
+	  <option value="facebook">Hardware</option>
+	  <option value="twitter">Business Developement</option>
+	  <option value="foursquare">Marketing</option>
+	  <option value="multiple">Professional Services</option>
+	</select><br>
+	<br>
+	
+	<input placeholder="What is your name?"> <br>
+	<br>
+		
+	<input id="callBack" type="submit" value="Submit">
+	</form>
+	<br>
+    <br>
+    
+    <script type="text/coffeescript">
+console.log('inside the script tag')
+	$.ajax 'http://beta.openbadges.org/displayer/convert/email',
+  data :
+    key : 'tjm5114@gmail.com'
+  success  : (res, status, xhr) -> root.show_alert = () alert(data.userID)
+  error    : (xhr, status, err) -> root.show_alert = () alert('you suck')
+  complete : (xhr, status) ->
+	
+	
+	</script>
+  </div>
+
+</div>
+{{ include layoutBottom }}

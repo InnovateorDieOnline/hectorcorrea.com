@@ -1,0 +1,142 @@
+2013-11-05 21:36:08.353 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 21:36:16.419 INFO: siteRoutes:home
+2013-11-05 21:36:20.629 INFO: siteRoutes:home
+2013-11-05 21:36:22.034 INFO: siteRoutes:about
+2013-11-05 21:36:22.906 INFO: blogRoutes:viewAll
+2013-11-05 21:36:23.629 INFO: siteRoutes:search
+2013-11-05 21:36:25.331 INFO: blogRoutes:viewAll
+2013-11-05 21:48:49.360 INFO: blogRoutes:viewAll
+2013-11-05 21:49:56.171 INFO: blogRoutes:viewOne using-layouts-with-ejs-in-express-3-x
+2013-11-05 21:59:13.525 INFO: siteRoutes:about
+2013-11-05 21:59:51.656 INFO: siteRoutes:about
+2013-11-05 22:04:42.763 INFO: siteRoutes:about
+2013-11-05 22:06:27.779 INFO: blogRoutes:viewAll
+2013-11-05 22:06:28.955 INFO: siteRoutes:about
+2013-11-05 22:06:40.873 INFO: siteRoutes:about
+2013-11-05 22:09:16.226 INFO: blogRoutes:viewAll
+2013-11-05 22:09:17.608 INFO: siteRoutes:search
+2013-11-05 22:09:20.639 INFO: siteRoutes:credits
+2013-11-05 22:09:34.252 INFO: siteRoutes:credits
+2013-11-05 22:09:37.626 INFO: siteRoutes:credits
+2013-11-05 22:14:48.998 INFO: siteRoutes:about
+2013-11-05 22:22:27.281 INFO: siteRoutes:about
+2013-11-05 22:22:39.997 INFO: siteRoutes:about
+2013-11-05 22:24:57.425 INFO: siteRoutes:about
+2013-11-05 22:25:07.014 INFO: siteRoutes:about
+2013-11-05 22:27:38.108 INFO: siteRoutes:about
+2013-11-05 22:28:13.724 INFO: siteRoutes:about
+2013-11-05 22:39:48.599 INFO: siteRoutes:about
+2013-11-05 22:39:59.904 INFO: siteRoutes:about
+2013-11-05 22:40:39.501 INFO: siteRoutes:about
+2013-11-05 22:40:42.021 INFO: siteRoutes:home
+2013-11-05 22:40:43.561 INFO: siteRoutes:about
+2013-11-05 22:42:05.670 INFO: siteRoutes:about
+2013-11-05 22:42:15.899 INFO: blogRoutes:viewAll
+2013-11-05 22:42:20.083 INFO: siteRoutes:about
+2013-11-05 22:42:47.473 INFO: siteRoutes:about
+2013-11-05 22:43:10.008 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:43:19.229 ERROR: Global error handler. Error ReferenceError: title is not defined
+2013-11-05 22:44:15.182 INFO: siteRoutes:home
+2013-11-05 22:44:18.552 ERROR: Global error handler. Error ReferenceError: title is not defined
+2013-11-05 22:44:20.054 INFO: siteRoutes:home
+2013-11-05 22:44:20.768 ERROR: Global error handler. Error ReferenceError: title is not defined
+2013-11-05 22:44:58.841 ERROR: Global error handler. Error ReferenceError: title is not defined
+2013-11-05 22:45:28.402 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:45:33.127 INFO: siteRoutes:home
+2013-11-05 22:45:34.623 INFO: siteRoutes:about
+2013-11-05 22:46:20.619 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:46:24.824 INFO: siteRoutes:home
+2013-11-05 22:46:25.877 INFO: siteRoutes:about
+2013-11-05 22:47:05.592 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:47:14.275 INFO: siteRoutes:home
+2013-11-05 22:47:15.377 INFO: siteRoutes:about
+2013-11-05 22:53:09.312 INFO: siteRoutes:about
+2013-11-05 22:53:25.408 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:53:27.743 INFO: blogRoutes:viewAll
+2013-11-05 22:53:28.974 INFO: siteRoutes:about
+2013-11-05 22:54:05.569 INFO: siteRoutes:about
+2013-11-05 22:54:08.187 INFO: siteRoutes:home
+2013-11-05 22:54:09.285 INFO: siteRoutes:about
+2013-11-05 22:54:16.816 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:54:20.162 INFO: siteRoutes:about
+2013-11-05 22:54:22.409 INFO: blogRoutes:viewAll
+2013-11-05 22:54:23.273 INFO: siteRoutes:about
+2013-11-05 22:54:24.019 INFO: siteRoutes:home
+2013-11-05 22:54:24.805 INFO: siteRoutes:about
+2013-11-05 22:58:05.171 INFO: siteRoutes:about
+2013-11-05 22:59:11.020 INFO: siteRoutes:about
+2013-11-05 22:59:12.980 INFO: siteRoutes:about
+2013-11-05 22:59:23.023 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 22:59:27.623 INFO: siteRoutes:home
+2013-11-05 22:59:28.405 INFO: siteRoutes:about This is from view 
+2013-11-05 23:00:12.547 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 23:00:16.249 INFO: siteRoutes:about 
+2013-11-05 23:00:56.663 INFO: blogRoutes:viewAll
+2013-11-05 23:00:58.525 INFO: siteRoutes:about 
+2013-11-05 23:04:06.503 INFO: siteRoutes:about 
+2013-11-05 23:04:06.515 ERROR: Global error handler. Error ReferenceError: C:\node\hector\views\about.ejs:4
+    2| <div class="row">
+    3|   <div class="eight columns">
+ >> 4|     <h1> #{{title}} </h1>
+    5| 
+    6|     <p><%- title %> I am a Software Developer in State College, PA. You can contact me at <a href="mailto:hector@hectorcorrea.com">hector@hectorcorrea.com </a></p>
+    7| 
+
+title is not defined
+2013-11-05 23:04:33.567 INFO: siteRoutes:about 
+2013-11-05 23:04:33.571 ERROR: Global error handler. Error ReferenceError: C:\node\hector\views\about.ejs:4
+    2| <div class="row">
+    3|   <div class="eight columns">
+ >> 4|     <h1> {{=title}} </h1>
+    5| 
+    6|     <p><%- title %> I am a Software Developer in State College, PA. You can contact me at <a href="mailto:hector@hectorcorrea.com">hector@hectorcorrea.com </a></p>
+    7| 
+
+title is not defined
+2013-11-05 23:05:01.394 INFO: siteRoutes:about 
+2013-11-05 23:05:01.398 ERROR: Global error handler. Error ReferenceError: C:\node\hector\views\about.ejs:4
+    2| <div class="row">
+    3|   <div class="eight columns">
+ >> 4|     <h1> {{= title }} </h1>
+    5| 
+    6|     <p><%- title %> I am a Software Developer in State College, PA. You can contact me at <a href="mailto:hector@hectorcorrea.com">hector@hectorcorrea.com </a></p>
+    7| 
+
+title is not defined
+2013-11-05 23:05:44.839 INFO: siteRoutes:about 
+2013-11-05 23:05:44.844 ERROR: Global error handler. Error ReferenceError: C:\node\hector\views\about.ejs:4
+    2| <div class="row">
+    3|   <div class="eight columns">
+ >> 4|     <h1> {{= title }} </h1>
+    5| 
+    6|     <p><%- title %> I am a Software Developer in State College, PA. You can contact me at <a href="mailto:hector@hectorcorrea.com">hector@hectorcorrea.com </a></p>
+    7| 
+
+title is not defined
+2013-11-05 23:05:50.501 INFO: siteRoutes:about 
+2013-11-05 23:05:50.504 ERROR: Global error handler. Error ReferenceError: C:\node\hector\views\about.ejs:4
+    2| <div class="row">
+    3|   <div class="eight columns">
+ >> 4|     <h1> {{= title }} </h1>
+    5| 
+    6|     <p><%- title %> I am a Software Developer in State College, PA. You can contact me at <a href="mailto:hector@hectorcorrea.com">hector@hectorcorrea.com </a></p>
+    7| 
+
+title is not defined
+2013-11-05 23:05:58.791 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-05 23:06:01.756 INFO: siteRoutes:about
+2013-11-05 23:14:09.400 INFO: blogRoutes:viewAll
+2013-11-05 23:14:10.852 INFO: siteRoutes:about
+2013-11-05 23:15:49.794 INFO: siteRoutes:about
+2013-11-05 23:16:48.267 INFO: siteRoutes:about
+2013-11-05 23:17:13.969 INFO: siteRoutes:about
+2013-11-05 23:19:27.431 INFO: siteRoutes:about
+2013-11-05 23:19:28.992 INFO: blogRoutes:viewAll
+2013-11-05 23:19:30.230 INFO: siteRoutes:search
+2013-11-05 23:20:15.832 INFO: siteRoutes:search
+2013-11-05 23:20:40.466 INFO: siteRoutes:search
+2013-11-05 23:20:49.365 INFO: siteRoutes:home
+2013-11-05 23:20:54.591 INFO: siteRoutes:about
+2013-11-05 23:20:55.284 INFO: blogRoutes:viewAll
+2013-11-05 23:20:56.542 INFO: siteRoutes:search
+2013-11-05 23:20:57.605 INFO: blogRoutes:viewAll

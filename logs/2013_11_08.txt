@@ -1,0 +1,128 @@
+2013-11-08 19:09:33.819 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-08 19:09:49.187 INFO: siteRoutes:home
+2013-11-08 19:21:17.196 INFO: siteRoutes:home
+2013-11-08 19:22:03.576 INFO: siteRoutes:home
+2013-11-08 19:27:48.944 INFO: siteRoutes:home
+2013-11-08 19:27:53.161 INFO: siteRoutes:about
+2013-11-08 19:27:54.547 INFO: blogRoutes:viewAll
+2013-11-08 19:27:55.704 INFO: siteRoutes:search
+2013-11-08 19:27:56.229 INFO: blogRoutes:viewAll
+2013-11-08 19:27:57.107 INFO: siteRoutes:search
+2013-11-08 19:27:58.002 INFO: siteRoutes:about
+2013-11-08 19:27:58.630 INFO: siteRoutes:home
+2013-11-08 19:28:00.276 INFO: siteRoutes:about
+2013-11-08 19:28:01.840 INFO: siteRoutes:about
+2013-11-08 19:35:56.763 INFO: siteRoutes:about
+2013-11-08 19:36:02.960 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:37:07.944 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:37:10.120 INFO: siteRoutes:home
+2013-11-08 19:37:11.219 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:37:13.456 INFO: siteRoutes:home
+2013-11-08 19:37:44.643 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:37:46.626 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:37:47.834 INFO: siteRoutes:home
+2013-11-08 19:39:10.848 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:39:11.898 INFO: siteRoutes:home
+2013-11-08 19:39:13.155 INFO: blogRoutes:viewAll
+2013-11-08 19:39:14.189 INFO: siteRoutes:search
+2013-11-08 19:39:15.118 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:42:41.844 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:42:43.673 INFO: blogRoutes:viewAll
+2013-11-08 19:42:44.648 INFO: siteRoutes:search
+2013-11-08 19:42:45.482 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:43:22.697 INFO: siteRoutes:home
+2013-11-08 19:43:24.052 INFO: blogRoutes:viewAll
+2013-11-08 19:43:24.945 INFO: siteRoutes:search
+2013-11-08 19:43:26.057 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:43:30.939 INFO: siteRoutes:home
+2013-11-08 19:43:31.991 INFO: blogRoutes:viewAll
+2013-11-08 19:43:32.834 INFO: siteRoutes:home
+2013-11-08 19:53:30.654 INFO: siteRoutes:home
+2013-11-08 19:53:32.944 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:53:34.496 INFO: siteRoutes:home
+2013-11-08 19:53:35.574 INFO: siteRoutes:notFound URL: /educator
+2013-11-08 19:53:38.855 INFO: siteRoutes:home
+2013-11-08 19:57:27.195 INFO: siteRoutes:home
+2013-11-08 19:57:29.299 INFO: siteRoutes:about
+2013-11-08 20:03:20.912 INFO: siteRoutes:about
+2013-11-08 20:03:21.852 INFO: siteRoutes:search
+2013-11-08 20:03:23.834 INFO: blogRoutes:viewAll
+2013-11-08 20:03:24.684 INFO: siteRoutes:about
+2013-11-08 20:03:31.426 INFO: siteRoutes:about
+2013-11-08 20:03:33.237 INFO: blogRoutes:viewAll
+2013-11-08 20:03:34.610 INFO: siteRoutes:search
+2013-11-08 20:04:28.469 INFO: blogRoutes:viewAll
+2013-11-08 20:04:32.613 INFO: siteRoutes:search
+2013-11-08 20:04:34.165 INFO: siteRoutes:about
+2013-11-08 20:04:35.932 INFO: siteRoutes:home
+2013-11-08 20:04:36.572 INFO: siteRoutes:about
+2013-11-08 20:04:37.136 INFO: blogRoutes:viewAll
+2013-11-08 20:04:37.657 INFO: siteRoutes:search
+2013-11-08 20:09:23.341 INFO: siteRoutes:search
+2013-11-08 20:09:24.856 INFO: siteRoutes:home
+2013-11-08 20:09:26.212 INFO: siteRoutes:about
+2013-11-08 20:09:26.935 INFO: blogRoutes:viewAll
+2013-11-08 20:09:27.976 INFO: siteRoutes:search
+2013-11-08 20:09:33.219 INFO: siteRoutes:home
+2013-11-08 20:09:34.222 INFO: siteRoutes:about
+2013-11-08 20:09:34.832 INFO: blogRoutes:viewAll
+2013-11-08 20:09:35.348 INFO: siteRoutes:search
+2013-11-08 20:09:36.851 INFO: siteRoutes:home
+2013-11-08 20:09:37.456 INFO: siteRoutes:about
+2013-11-08 20:09:38.471 INFO: blogRoutes:viewAll
+2013-11-08 20:09:39.023 INFO: siteRoutes:search
+2013-11-08 20:09:39.830 INFO: blogRoutes:viewAll
+2013-11-08 20:10:46.736 INFO: blogRoutes:viewAll
+2013-11-08 20:10:51.476 INFO: siteRoutes:search
+2013-11-08 20:10:52.802 INFO: blogRoutes:viewAll
+2013-11-08 20:10:54.653 INFO: siteRoutes:about
+2013-11-08 20:10:55.762 INFO: blogRoutes:viewAll
+2013-11-08 20:10:57.050 INFO: siteRoutes:search
+2013-11-08 20:10:57.677 INFO: siteRoutes:search
+2013-11-08 20:10:58.319 INFO: blogRoutes:viewAll
+2013-11-08 20:16:01.370 INFO: blogRoutes:viewAll
+2013-11-08 20:16:04.143 INFO: siteRoutes:about
+2013-11-08 20:16:05.227 INFO: siteRoutes:home
+2013-11-08 20:16:06.155 INFO: blogRoutes:viewAll
+2013-11-08 20:16:07.315 INFO: siteRoutes:search
+2013-11-08 20:16:10.848 INFO: blogRoutes:viewAll
+2013-11-08 20:16:11.304 INFO: siteRoutes:about
+2013-11-08 20:16:11.858 INFO: siteRoutes:home
+2013-11-08 20:16:26.717 INFO: siteRoutes:about
+2013-11-08 20:16:28.713 INFO: blogRoutes:viewAll
+2013-11-08 20:16:29.650 INFO: siteRoutes:search
+2013-11-08 20:16:30.123 INFO: blogRoutes:viewAll
+2013-11-08 20:16:30.762 INFO: siteRoutes:about
+2013-11-08 20:16:31.385 INFO: siteRoutes:home
+2013-11-08 20:38:38.794 INFO: siteRoutes:home
+2013-11-08 20:38:49.889 INFO: siteRoutes:about
+2013-11-08 20:38:49.957 INFO: siteRoutes:notFound URL: /images/webCover.jpg
+2013-11-08 20:38:51.594 INFO: siteRoutes:home
+2013-11-08 20:38:52.933 INFO: blogRoutes:viewAll
+2013-11-08 20:38:52.968 INFO: siteRoutes:notFound URL: /images/webCover.jpg
+2013-11-08 20:38:53.861 INFO: siteRoutes:search
+2013-11-08 20:38:53.894 INFO: siteRoutes:notFound URL: /images/webCover.jpg
+2013-11-08 20:38:55.007 INFO: siteRoutes:home
+2013-11-08 20:38:55.462 INFO: siteRoutes:about
+2013-11-08 20:38:55.493 INFO: siteRoutes:notFound URL: /images/webCover.jpg
+2013-11-08 20:38:56.376 INFO: siteRoutes:home
+2013-11-08 20:39:33.690 INFO: siteRoutes:home
+2013-11-08 20:39:37.599 INFO: siteRoutes:about
+2013-11-08 20:39:38.499 INFO: blogRoutes:viewAll
+2013-11-08 20:39:39.150 INFO: siteRoutes:search
+2013-11-08 20:39:39.179 INFO: siteRoutes:notFound URL: /images/webCover.jpg
+2013-11-08 20:42:46.476 INFO: siteRoutes:search
+2013-11-08 20:42:56.906 INFO: siteRoutes:home
+2013-11-08 20:52:35.669 INFO: siteRoutes:home
+2013-11-08 20:53:06.695 INFO: siteRoutes:home
+2013-11-08 20:53:07.644 INFO: siteRoutes:about
+2013-11-08 20:53:08.718 INFO: blogRoutes:viewAll
+2013-11-08 20:53:09.481 INFO: siteRoutes:search
+2013-11-08 20:53:10.389 INFO: blogRoutes:viewAll
+2013-11-08 20:53:11.411 INFO: siteRoutes:home
+2013-11-08 20:57:40.259 INFO: siteRoutes:about
+2013-11-08 20:57:40.620 INFO: blogRoutes:viewAll
+2013-11-08 20:57:41.337 INFO: siteRoutes:search
+2013-11-08 20:57:42.249 INFO: siteRoutes:home
+2013-11-08 23:16:49.698 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-08 23:16:53.230 INFO: siteRoutes:about

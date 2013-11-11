@@ -1,0 +1,16 @@
+2013-11-09 00:15:02.078 INFO: siteRoutes:about
+2013-11-09 00:15:04.921 INFO: siteRoutes:about
+2013-11-09 00:15:10.530 INFO: blogRoutes:viewAll
+2013-11-09 00:15:13.972 INFO: siteRoutes:search
+2013-11-09 00:16:48.495 INFO: siteRoutes:search
+2013-11-09 23:28:26.076 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-09 23:48:50.196 INFO: siteRoutes:search
+2013-11-09 23:48:51.252 INFO: blogRoutes:viewAll
+2013-11-09 23:48:52.172 INFO: siteRoutes:about
+2013-11-09 23:48:52.929 INFO: siteRoutes:home
+2013-11-09 23:48:54.473 INFO: siteRoutes:home
+2013-11-09 23:48:55.730 INFO: siteRoutes:search
+2013-11-09 23:51:45.335 INFO: siteRoutes:home
+2013-11-09 23:59:37.766 INFO: siteRoutes:about
+2013-11-09 23:59:38.810 INFO: blogRoutes:viewAll
+2013-11-09 23:59:40.575 INFO: siteRoutes:search

@@ -1,0 +1,7 @@
+2013-11-06 12:56:31.086 INFO: Express listening at http://localhost:3000 in development mode (Capital)
+2013-11-06 13:00:38.634 INFO: siteRoutes:home
+2013-11-06 13:00:42.471 INFO: siteRoutes:about
+2013-11-06 13:00:43.973 INFO: blogRoutes:viewAll
+2013-11-06 13:00:44.716 INFO: siteRoutes:search
+2013-11-06 13:00:45.962 INFO: siteRoutes:about
+2013-11-06 13:00:47.349 INFO: siteRoutes:home

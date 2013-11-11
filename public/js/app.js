@@ -1,378 +1,130 @@
-// ========================================================
-// Services
-// ========================================================
-var services = angular.module('hc.services', ['ngResource']);
+jQuery(document).ready(function ($) {
 
-services.factory('Blog', ['$resource', 
-  function($resource) {
-    var url = '/api/blog/:url/:key';
-    var params = {key: '@key', url: '@url'};
-    
-    var methods = {};
-    
-    methods.all = {
-      method:'GET', 
-      params:{url:'all', key:''}, 
-      isArray:true
-    };
+  /* Use this js doc for all application specific JS */
 
-    methods.createNew = {
-      method:'POST', 
-      params:{url:'new'}, 
-      isArray:false
-    };    
+  /* TABS --------------------------------- */
+  /* Remove if you don't need :) */
 
-    return $resource(url, params, methods);
+  function activateTab($tab) {
+    var $activeTab = $tab.closest('dl').find('dd.active'),
+        contentLocation = $tab.children('a').attr("href") + 'Tab';
+
+    // Strip off the current url that IE adds
+    contentLocation = contentLocation.replace(/^.+#/, '#');
+
+    //Make Tab Active
+    $activeTab.removeClass('active');
+    $tab.addClass('active');
+
+    //Show Tab Content
+    $(contentLocation).closest('.tabs-content').children('li').removeClass('active').hide();
+    $(contentLocation).css('display', 'block').addClass('active');
   }
-]);
 
-
-services.factory('SingleBlog', ['Blog', '$route', '$q',
-  function(Blog, $route, $q) {
-    return function(decode) {
-
-      var delay = $q.defer();
-      var query = {
-        url: $route.current.params.url,
-        key: $route.current.params.key
-      };
-
-      if(decode) {
-        query.decode = true;
-      }
-
-      var ok = function(blog) {
-        blog.editUrl = "/blog/" + blog.url + "/" + blog.key + "/edit";
-        delay.resolve(blog);
-      };
-
-      var error = function() {
-        delay.reject('Unable to fetch blog ' + query.key);
-      };
-
-      Blog.get(query, ok, error);
-      return delay.promise;
-    }
-  }
-]);
-
-
-services.factory('ListBlogs', ['Blog', '$route', '$q',
-  function(Blog, $route, $q) {
-    return function() {
-
-      var delay = $q.defer();
-
-      var ok = function(entries) { 
-        delay.resolve(entries); 
-      };
-
-      var error = function() { 
-        delay.reject('Unable to fetch blog entries'); 
-      };
-
-      Blog.all(ok, error);
-      return delay.promise;
-    }
-  }
-]);
-
-
-services.factory('Security', ['$cookies', 
-  function($cookies) { 
-    return {
-      isAuth: function() { return ($cookies.authToken !== undefined); } 
-    };
-  }
-]);
-
-
-// ========================================================
-// App Definition
-// ========================================================
-
-var hcApp = angular.module('hcApp', ['ngCookies', 'hc.services']);
-
-var routesConfig = function($routeProvider, $locationProvider) {
-
-  // $locationProvider.html5Mode(true);
-
-  $routeProvider.
-  when('/', {
-    templateUrl: '/partials/home.html'   
-  }).
-  when('/blog', {
-    controller: 'ListController',
-    resolve: {
-      entries: function(ListBlogs) { return ListBlogs(); }
-    },
-    templateUrl: '/partials/blogList.html' 
-  }).
-  when('/blog/:url/:key/edit', {
-    controller: 'EditController',
-    resolve: {
-      blog: function(SingleBlog) { return SingleBlog(); }
-    },
-    templateUrl: '/partials/blogEdit.html' 
-  }).
-  when('/blog/:url/:key', {
-    controller: 'ViewController',
-    resolve: {
-      blog: function(SingleBlog) { return SingleBlog(); }
-    },
-    templateUrl: '/partials/blogView.html' 
-  }).
-  when('/about', {
-    templateUrl: '/partials/about.html' 
-  }).
-  when('/credits', {
-    templateUrl: '/partials/credits.html' 
-  }).
-  when('/user/changePassword', {
-    controller: 'ChangePasswordController',
-    templateUrl: '/partials/changePassword.html' 
-  }).
-
-  when('/login/init', {
-    controller: 'LoginController',
-    templateUrl: '/partials/loginInit.html' 
-  }).
-  when('/logout', {
-    controller: 'LoginController',
-    templateUrl: '/partials/logout.html' 
-  }).
-  when('/login', {
-    controller: 'LoginController',
-    templateUrl: '/partials/login.html' 
-  }).
-  otherwise({
-    templateUrl: '/partials/notFound.html' 
+  $('dl.tabs dd a').on('click.fndtn', function (event) {
+    activateTab($(this).parent('dd'));
   });
-}
 
-hcApp.config(routesConfig);
-
-
-// This global var is used to preserve the last search.
-// I should be using $rootScope for this but I had a few
-// timing issues setting the $rootScope in a controller  
-// and then reading its values on the Service at a later
-// time. For now use good old global vars.
-var globalSearch = {text: null, data: null};
-
-
-// ========================================================
-// Controllers
-// ========================================================
-
-hcApp.controller('ListController', ['$scope', '$location', 'Security', 'Blog', 'entries', 
-  function($scope, $location, Security, Blog, entries) {
-
-    $scope.entries = entries;
-    $scope.isAuth = Security.isAuth();
-
-    $scope.new = function() {
-      Blog.createNew(
-        function(blog) {
-          var editUrl = "/blog/" + blog.url + "/" + blog.key + "/edit";
-          $location.url(editUrl);
-        },
-        function(e) {
-          $scope.errorMsg = e.data.message;
-        }
-      );
-
-    }
-
+  if (window.location.hash) {
+    activateTab($('a[href="' + window.location.hash + '"]').parent('dd'));
+    $.foundation.customForms.appendCustomMarkup();
   }
-]);
+
+  /* ALERT BOXES ------------ */
+  $(".alert-box").delegate("a.close", "click", function(event) {
+    event.preventDefault();
+    $(this).closest(".alert-box").fadeOut(function(event){
+      $(this).remove();
+    });
+  });
+
+  /* PLACEHOLDER FOR FORMS ------------- */
+  /* Remove this and jquery.placeholder.min.js if you don't need :) */
+  $('input, textarea').placeholder();
+
+  /* TOOLTIPS ------------ */
+  $(this).tooltips();
+  
+  //submit button
+  /displayer/[userid]/groups.json
+
+  /* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
+  //  $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
+  //  $('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
+  //  $('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
+  //  $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
 
 
-hcApp.controller('ViewController', ['$scope', '$http', '$location', 'Security', 'blog',
-  function($scope, $http, $location, Security, blog) {
+  /* DROPDOWN NAV ------------- */
 
-    $scope.blog = blog;
-    $scope.isAuth = Security.isAuth();
-
-    $scope.edit = function() {
-      $location.url($scope.blog.editUrl);
-    };
-
-    // TODO: Move this code to the service
-    $scope.draft = function() {
-      var draftUrl = '/api/blog/' + $scope.blog.url + '/' + $scope.blog.key + '/draft';
-      $http.post(draftUrl, {}).
-      success(function(data, status) {
-        $scope.blog.postedOn = null;
-      }).
-      error(function(data, status) {
-        console.log("ERROR: not marked as draft");
-      });
-    };
-
-    // TODO: Move this code to the service
-    $scope.post = function() {
-      var postUrl = '/api/blog/' + $scope.blog.url + '/' + $scope.blog.key + '/post';
-      $http.post(postUrl, {}).
-      success(function(data, status) {
-        $scope.blog.postedOn = data.postedOn;
-      }).
-      error(function(data, status) {
-        console.log("ERROR: not marked as posted");
-      });
-    };
-
+  var lockNavBar = false;
+  /* Windows Phone, sadly, does not register touch events :( */
+  if (Modernizr.touch || navigator.userAgent.match(/Windows Phone/i)) {
+    $('.nav-bar a.flyout-toggle').on('click.fndtn touchstart.fndtn', function(e) {
+      e.preventDefault();
+      var flyout = $(this).siblings('.flyout').first();
+      if (lockNavBar === false) {
+        $('.nav-bar .flyout').not(flyout).slideUp(500);
+        flyout.slideToggle(500, function(){
+          lockNavBar = false;
+        });
+      }
+      lockNavBar = true;
+    });
+    $('.nav-bar>li.has-flyout').addClass('is-touch');
+  } else {
+    $('.nav-bar>li.has-flyout').hover(function() {
+      $(this).children('.flyout').show();
+    }, function() {
+      $(this).children('.flyout').hide();
+    });
   }
-]);
 
+  /* DISABLED BUTTONS ------------- */
+  /* Gives elements with a class of 'disabled' a return: false; */
+  $('.button.disabled').on('click.fndtn', function (event) {
+    event.preventDefault();
+  });
+  
 
-hcApp.controller('EditController', ['$scope', '$location', 'Security', 'Blog', 'blog', 
-  function($scope, $location, Security, Blog, blog) {
+  /* SPLIT BUTTONS/DROPDOWNS */
+  $('.button.dropdown > ul').addClass('no-hover');
 
-    $scope.blog = blog;
-    $scope.isAuth = Security.isAuth();
+  $('.button.dropdown').on('click.fndtn touchstart.fndtn', function (e) {
+    e.stopPropagation();
+  });
+  $('.button.dropdown.split span').on('click.fndtn touchstart.fndtn', function (e) {
+    e.preventDefault();
+    $('.button.dropdown').not($(this).parent()).children('ul').removeClass('show-dropdown');
+    $(this).siblings('ul').toggleClass('show-dropdown');
+  });
+  $('.button.dropdown').not('.split').on('click.fndtn touchstart.fndtn', function (e) {
+    $('.button.dropdown').not(this).children('ul').removeClass('show-dropdown');
+    $(this).children('ul').toggleClass('show-dropdown');
+  });
+  $('body, html').on('click.fndtn touchstart.fndtn', function () {
+    $('.button.dropdown ul').removeClass('show-dropdown');
+  });
 
-    $scope.submit = function() {
-      var blog = new Blog($scope.blog);
-      blog.$save(
-        function(b) {
-          var viewUrl = "/blog/" + b.url + "/"+ b.key;
-          $location.url(viewUrl);
-        },
-        function(e) {
-          $scope.errorMsg = e.data.message;
-        }
-      );
-    }
+  // Positioning the Flyout List
+  var normalButtonHeight  = $('.button.dropdown:not(.large):not(.small):not(.tiny)').outerHeight() - 1,
+      largeButtonHeight   = $('.button.large.dropdown').outerHeight() - 1,
+      smallButtonHeight   = $('.button.small.dropdown').outerHeight() - 1,
+      tinyButtonHeight    = $('.button.tiny.dropdown').outerHeight() - 1;
 
-  }
-]);
+  $('.button.dropdown:not(.large):not(.small):not(.tiny) > ul').css('top', normalButtonHeight);
+  $('.button.dropdown.large > ul').css('top', largeButtonHeight);
+  $('.button.dropdown.small > ul').css('top', smallButtonHeight);
+  $('.button.dropdown.tiny > ul').css('top', tinyButtonHeight);
+  
+  $('.button.dropdown.up:not(.large):not(.small):not(.tiny) > ul').css('top', 'auto').css('bottom', normalButtonHeight - 2);
+  $('.button.dropdown.up.large > ul').css('top', 'auto').css('bottom', largeButtonHeight - 2);
+  $('.button.dropdown.up.small > ul').css('top', 'auto').css('bottom', smallButtonHeight - 2);
+  $('.button.dropdown.up.tiny > ul').css('top', 'auto').css('bottom', tinyButtonHeight - 2);
 
+  /* CUSTOM FORMS */
+  $.foundation.customForms.appendCustomMarkup();
+  
+  
 
-hcApp.controller('RecipeSearchController', ['$scope', '$routeParams', 'Security', 'Recipe', 'recipes',
-  function($scope, $routeParams, Security, Recipe, recipes) {
-
-    $scope.recipes = recipes;
-    $scope.searchText = globalSearch.text;
-    $scope.message = "";
-    $scope.errorMsg = null;
-    $scope.isAuth = Security.isAuth();
-
-    $scope.search = function() {
-
-      Recipe.query(
-        {text: $scope.searchText}, 
-        function(recipes) {
-
-          $scope.message = "";
-          $scope.recipes = recipes;
-          $scope.errorMsg = null;
-          globalSearch.text = $scope.searchText;
-          globalSearch.data = recipes;
-
-          if(recipes.length == 0) {
-            $scope.message = "No recipes were found"
-          }
-          else {
-            // Give the focus to another element so that
-            // the keyboard presented by phones and tables
-            // disappears.
-            // This should probably go as an Angular Directive
-            // rather than manipulating the DOM here but
-            // we'll leave that for another day.
-            var btn = document.getElementById("btnSearch");
-            if(btn) btn.focus();
-          }
-
-        }, 
-        function(e) {
-
-          globalSearch.text = null;
-          globalSearch.data = null;
-
-          $scope.errorMsg = e.message + "/" + e.details;
-          console.log($scope.errorMsg);
-
-        }
-      );
-
-    }
-
-  }
-]);
-
-
-hcApp.controller('LoginController', ['$scope', '$http', '$location', 'Security', 
-  function($scope, $http, $location, Security) {
-
-    $scope.user = '';
-    $scope.password = '';
-    $scope.isAuth = Security.isAuth();
-
-    $scope.init = function() {
-      console.log('About to init login');
-      $http.post('/api/login/initialize', {}).
-      success(function(data, status) {
-        $scope.errorMsg = 'Initialized';
-      }).
-      error(function(data, status) {
-        debugger;
-        $scope.errorMsg = data;
-        console.log('ERROR in login init');
-      });
-    };
-
-    $scope.logout = function() {
-      console.log('About to logout');
-      $http.post('/api/logout', {}).
-      success(function(data, status) {
-        $scope.errorMsg = 'Logged out';
-      }).
-      error(function(data, status) {
-        debugger;
-        $scope.errorMsg = data;
-        console.log('ERROR logging out');
-      });
-    };
-
-    $scope.login = function() {
-      console.log('About to login');
-      $http.post('/api/login', {user: $scope.user, password: $scope.password}).
-      success(function(data, status) {
-        $scope.errorMsg = 'Logged in OK';
-        // TODO: redirect to home page?
-      }).
-      error(function(data, status) {
-        debugger;
-        $scope.errorMsg = data;
-        console.log('ERROR in login');
-      });
-    };
-
-  }
-]);
-
-
-hcApp.controller('ChangePasswordController', ['$scope', '$http', '$location', 'Security', 
-  function($scope, $http, $location, Security) {
-
-    $scope.user = '';
-    $scope.password = '';
-    $scope.isAuth = Security.isAuth();
-
-    $scope.changePassword = function() {
-      console.log('About to change password');
-      $http.post('/api/user/changePassword', {user: $scope.user, password: $scope.password}).
-      success(function(data, status) {
-        $scope.errorMsg = 'Changed password OK';
-        // TODO: redirect to home page?
-      }).
-      error(function(data, status) {
-        debugger;
-        $scope.errorMsg = data;
-        console.log('ERROR changing password');
-      });
-    };
-
-  }
-]);
+});

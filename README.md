@@ -2,48 +2,68 @@ hectorcorrea.com
 ================
 This is the source code of the site that powers my personal site [http://hectorcorrea.com](http://hectorcorrea.com)
 
-In a nutshell, this site is a home grown mini-blog engine using Node.js, Express.js, Angular.js, and MongoDB (the so called MEAN stack)
+In a nutshell, this site is a home grown mini-blog engine using Node.js, CoffeeScript, and Express.js
+
+At this point there is code to handle a home page, an about page, a way to see a list of topics, and click on each topic to view the details of the post.
+
+The data is kept in text files for now.
+
+Although this code is running live it should be seen as a work in progress.
 
 
 Requirements
 ------------
-To run this code you need to have **Node.js** and **Mongo DB** 
-installed on your machine. 
+To run this code you need to have **Node.js** installed on your machine. If you don't have Node.js you can get it from [nodejs.org](http://nodejs.org)
 
-Last but not least, you'll need to install a few modules that are used in the code. You can do this by executing the following commands in the Terminal 
-*from inside the folder where you downloaded the source code*
+In addition to Node.js you'll need **CoffeeScript**. Once you've installed Node.js you can easily install CoffeeScript from the Terminal with the following command: 
+
+    npm install -g coffee-script
+
+CoffeeScript is a language that compiles to JavaScript. It allow us to write the code with a cleaner syntax than raw JavaScript. [More info](http://coffeescript.org)
+
+Last but not least, you'll need to install **Express** and **EJS** by running the following command from the Terminal *from inside the folder where you downloaded the source code*
 
     cd ~/dev/hectorcorrea.com
     npm install 
+
+Express is an MVC-like JavaScript framework that takes care of the boiler plate code to handle HTTP requests and responses. [More info](http://expressjs.com)
+
+EJS is a template engine for Node.js used to generate HTML pages with dynamic content. [More info](https://github.com/visionmedia/ejs)
 
 
 How to run the site
 -------------------
 Download the source code and install the requirements listed above.
 
-Update the settings.dev.json file and make sure the **dbUrl** points to your MongoDB database (e.g. "mongodb://localhost:27017/hectorcorrea"). 
+Update the settings.dev.json file and make sure the dataPath and logPath point to folders in your machine. Feel free to set them to an absolute path on your machine (e.g. /Users/yourname/dev/data and /Users/yourname/dev/logs)
 
 To kick off the application, just run the following command from the Terminal window: 
 
-    node server
+    coffee app 
 
-...and browse to your *http://localhost:3000* 
+...and browse to your *http://localhost:3000* You should see the rather anti-climactic web site with the beginnings of what will eventually be a blog engine. Enjoy it!
 
 
 Structure of the source code
 ----------------------------
+**app.coffee** is the main file. The rest of the code is organized as follow:
 
-Server-side Code
+* **\models:** CoffeeScript files with the models
+* **\routes:** CoffeeScript files with the controllers
+* **\views:** The views of the project (HTML + EJS)
+* **\public:** Static public files (client side JavaScript, CSS)
+* **\util:** Several small JavaScript utilities used throught the code
+* **\data:** Text files with the sample data
+* **\data_test:** Text files created when running the unit tests
+* **\logs:** Text files with the information logged when the app runs
 
-* **server.js** is the main server-side program. 
-* **models/** contains the server-side models and database access code.
-* **routes/** contains the server-side controllers.
-* **views/** contains the server-side views. There is really only on server-side view (index.ejs) since the rest of the content is loaded via Angular views.
+The **unit tests** for the models and the controllers are on the same 
+folder as the respective functionality (i.e. inside models and routes.) 
+You can run the tests for each class individuall 
+(e.g. coffee topicModelTest.coffee or coffee topicDataTest.coffee)
 
-Client-side Code
-
-* **public/js/app.js** is the main client-side program. This is the where Angular is configured. I am also storing in here the Angular client-side controllers. Ideally they should be on their own JavaScript file but I have not split them.
-* **public/js/partials/** contains the views loaded (client-side) by Angular
+There is also a Bash shell script on the root folder (testSuite.sh) that 
+runs all the unit tests at once. 
 
 
 Questions, comments, thoughts?
@@ -54,6 +74,6 @@ Feel free to contact me with questions or comments about this project.
 
 You can see a running version version of this code here:
 
-  [http://54.200.135.65](http://54.200.135.65/)
+  [http://hectorcorrea.com](http://hectorcorrea.com)
 
 Keep in mind that you'll need to host to the site on your own in order to be able to add new topics or edit existing ones. 

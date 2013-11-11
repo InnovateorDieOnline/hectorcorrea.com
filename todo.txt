@@ -1,37 +1,7 @@
-RSS feed
-  
-Import data
+* Error handling on EJS views (or a better understanding
+  of global error handling in Express)
 
-SEO enhancements for Angular.js
+* Versioning topics
 
-Security
-  Change password should ask for current password too
-  Confirm password in password change (!!!)
-  
-  Reset password
-
-Better error / info messages for setting up user
-
-Document Nginx and Upstart configuration
-Document pull
-
-Log viewers
-
-Search Page
-
-More user friendly display of dates
-
-Cache via Nginx for repeated requests
-
-Make enter default key in login form
-
-Polish the flow for login, change password, and logout
-
-
-=================
-Deploy to Azure: 
-  git push azure v2
-
-Update AWS with latest
-  git pull 
+* A decent editor/use markdown
 
